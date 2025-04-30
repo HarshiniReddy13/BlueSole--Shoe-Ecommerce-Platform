@@ -18,7 +18,7 @@ function ContactUs() {
 
       <div className="email-section">
         <a
-          href="mailto:BlueSole@gmail.com?subject=Feedback/Collaboration Request"
+          href="mailto:BlueSole4@gmail.com?subject=Feedback/Collaboration Request"
           className="email-button"
         >
           📧 Send Us an Email

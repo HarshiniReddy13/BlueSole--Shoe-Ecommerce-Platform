@@ -1,10 +1,27 @@
-// Catalog.jsx
+import { useEffect, useState } from 'react';
 import products from '../data/products.json';
 import ProductCard from '../components/ProductCard';
-import './Catalog.css'; // Assuming you have CSS for Catalog
+import './Catalog.css';
 
 function Catalog() {
-  console.log('Products data in Catalog:', products); // Confirm data here
+  const [allProducts, setAllProducts] = useState([]);
+
+  useEffect(() => {
+    // Load resale products from localStorage
+    const resaleItems = JSON.parse(localStorage.getItem('resaleItems')) || [];
+
+    // Assign unique IDs to resale items if they don't have one
+    const resaleFormatted = resaleItems.map((item, index) => ({
+      id: `resale-${index}`,
+      name: item.name,
+      price: Number(item.price),
+      image: item.image,
+      isResale: true
+    }));
+
+    // Merge resale with original
+    setAllProducts([...products, ...resaleFormatted]);
+  }, []);
 
   return (
     <div className="catalog">
@@ -17,7 +34,7 @@ function Catalog() {
       </div>
 
       <div className="catalog-grid">
-        {products.map(product => (
+        {allProducts.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

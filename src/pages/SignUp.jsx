@@ -1,6 +1,7 @@
+// SignUp.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './SignUp.css'; // Assuming you have a SignUp.css file
+import { Link, useNavigate } from 'react-router-dom'; // Added useNavigate
+import './SignUp.css';
 
 function SignUp() {
   const [name, setName] = useState('');
@@ -12,6 +13,8 @@ function SignUp() {
   const [gender, setGender] = useState('');
   const [terms, setTerms] = useState(false);
   const [errors, setErrors] = useState({});
+
+  const navigate = useNavigate(); // Initialized navigate
 
   const validateForm = () => {
     let isValid = true;
@@ -73,101 +76,173 @@ function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
-      localStorage.setItem('username', userName); // Save username
+      localStorage.setItem('username', userName);
       console.log('Form submitted successfully!', { userName, email, password });
-      // You can redirect or navigate to profile if needed
-      navigate('/');
+      
+      // Reset all fields after submission
+      setName('');
       setUserName('');
       setEmail('');
       setPassword('');
+      setConfirmPassword('');
+      setDob('');
+      setGender('');
+      setTerms(false);
       setErrors({});
+      
+      navigate('/'); // Navigate to home page
     } else {
       console.log('Form validation failed');
     }
   };
-  
 
   return (
-    <div className='x'><form className="form" onSubmit={handleSubmit}>
-    <div>
-      <label htmlFor="Name">Name:</label>
-      <input type="text" placeholder="full name" id="Name" value={name} onChange={(e) => setName(e.target.value)} />
-      {errors.name && <p className="error-message">{errors.name}</p>}
+    <div className="x">
+      <form className="form" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="Name">Name:</label>
+          <input
+            type="text"
+            placeholder="full name"
+            id="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          {errors.name && <p className="error-message">{errors.name}</p>}
+        </div>
+
+        <div>
+          <label htmlFor="UserName">User Name:</label>
+          <input
+            type="text"
+            placeholder="user name"
+            id="UserName"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+          {errors.userName && <p className="error-message">{errors.userName}</p>}
+        </div>
+
+        <div>
+          <label htmlFor="Email">Email:</label>
+          <input
+            type="email"
+            placeholder="gmail id"
+            id="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {errors.email && <p className="error-message">{errors.email}</p>}
+        </div>
+
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            placeholder="8 characters"
+            id="password"
+            minLength="8"
+            maxLength="8"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {errors.password && <p className="error-message">{errors.password}</p>}
+        </div>
+
+        <div>
+          <label htmlFor="cpassword">Confirm Password:</label>
+          <input
+            type="password"
+            placeholder="8 characters"
+            id="cpassword"
+            minLength="8"
+            maxLength="8"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          {errors.confirmPassword && <p className="error-message">{errors.confirmPassword}</p>}
+        </div>
+
+        <div>
+          <label htmlFor="dob">Date Of Birth:</label>
+          <input
+            type="date"
+            id="dob"
+            value={dob}
+            onChange={(e) => setDob(e.target.value)}
+          />
+          {errors.dob && <p className="error-message">{errors.dob}</p>}
+        </div>
+
+        <div>
+          <label htmlFor="gender">Gender:</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="gender"
+            id="m"
+            className="g"
+            value="male"
+            checked={gender === 'male'}
+            onChange={(e) => setGender(e.target.value)}
+          />
+          <label htmlFor="m">Male</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="gender"
+            id="f"
+            className="g"
+            value="female"
+            checked={gender === 'female'}
+            onChange={(e) => setGender(e.target.value)}
+          />
+          <label htmlFor="f">Female</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="gender"
+            id="other"
+            className="g"
+            value="other"
+            checked={gender === 'other'}
+            onChange={(e) => setGender(e.target.value)}
+          />
+          <label htmlFor="other">Other</label>
+          {errors.gender && <p className="error-message">{errors.gender}</p>}
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="cb"
+            checked={terms}
+            onChange={(e) => setTerms(e.target.checked)}
+          />
+          <label htmlFor="cb">I agree to the terms and conditions</label>
+          {errors.terms && <p className="error-message">{errors.terms}</p>}
+        </div>
+
+        <button type="submit" className="h8">Register</button>
+
+        <div>
+          <p>
+            Already have an account?{' '}
+            <Link to="/signin">
+              <button className="head8">
+                <b>Login</b>
+              </button>
+            </Link>
+          </p>
+        </div>
+      </form>
     </div>
-    <div>
-      <label htmlFor="username">User Name:</label>
-      <input type="text" placeholder="full name" id="UserName" value={userName} onChange={(e) => setUserName(e.target.value)} />
-      {errors.userName && <p className="error-message">{errors.userName}</p>}
-    </div>
-    <div>
-      <label htmlFor="Email">Email:</label>
-      <input type="email" placeholder="gmail id" id="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      {errors.email && <p className="error-message">{errors.email}</p>}
-    </div>
-    <div>
-      <label htmlFor="password">Password:</label>
-      <input
-        type="password"
-        placeholder="8 characters"
-        id="password"
-        minLength="8"
-        maxLength="8"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      {errors.password && <p className="error-message">{errors.password}</p>}
-    </div>
-    <div>
-      <label htmlFor="cpassword">Confirm Password:</label>
-      <input
-        type="password"
-        placeholder="8 characters"
-        id="cpassword"
-        minLength="8"
-        maxLength="8"
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-      />
-      {errors.confirmPassword && <p className="error-message">{errors.confirmPassword}</p>}
-    </div>
-    <div>
-      <label htmlFor="dob">Date Of Birth:</label>
-      <input type="date" id="dob" value={dob} onChange={(e) => setDob(e.target.value)} />
-      {errors.dob && <p className="error-message">{errors.dob}</p>}
-    </div>
-    <div>
-      <label htmlFor="gender">Gender:</label>
-    </div>
-    <div>
-      <input type="radio" name="gender" id="m" className="g" value="male" checked={gender === 'male'} onChange={(e) => setGender(e.target.value)} />
-      <label htmlFor="m">Male</label>
-    </div>
-    <div>
-      <input type="radio" name="gender" id="f" className="g" value="female" checked={gender === 'female'} onChange={(e) => setGender(e.target.value)} />
-      <label htmlFor="f">Female</label>
-    </div>
-    <div>
-      <input type="radio" name="gender" id="other" className="g" value="other" checked={gender === 'other'} onChange={(e) => setGender(e.target.value)} />
-      <label htmlFor="other">Other</label>
-      {errors.gender && <p className="error-message">{errors.gender}</p>}
-    </div>
-    <div>
-      <input type="checkbox" id="cb" checked={terms} onChange={(e) => setTerms(e.target.checked)} />
-      <label htmlFor="cb">I agree to the terms and conditions</label>
-      {errors.terms && <p className="error-message">{errors.terms}</p>}
-    </div>
-    <button type="submit" className="h8">Register</button>
-    <div>
-      <p>
-        Already have an account?
-        <Link to="/signin">
-          <button className="head8">
-            <b>Login</b>
-          </button>
-        </Link>
-      </p>
-    </div>
-  </form></div>
   );
 }
 

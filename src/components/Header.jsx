@@ -22,7 +22,7 @@ function Header() {
       </div>
       <div className="head2"><Link to="/">Home</Link></div>
       <div className="head5"><Link to="/catalog">Shop Now</Link></div>
-      <div className="head4"><Link to="/plans-pricing">Plans & Pricing</Link></div>
+      <div className="head4"><Link to="/community">Community</Link></div>
       <div className="head6"><Link to="/contact">Contact US</Link></div>
       <Link to="/signin">
         <button className="head8"><b>Login</b></button>

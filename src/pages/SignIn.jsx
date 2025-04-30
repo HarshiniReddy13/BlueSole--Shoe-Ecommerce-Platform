@@ -1,3 +1,4 @@
+//SignIn.jsx
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import './SignIn.css';
@@ -8,7 +9,6 @@ function SignIn() {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
   
-  // Initialize the useNavigate hook
   const navigate = useNavigate();
 
   const validateForm = () => {
@@ -45,11 +45,8 @@ function SignIn() {
     if (validateForm()) {
       localStorage.setItem('username', userName); // Save username
       console.log('Form submitted successfully!', { userName, email, password });
-      
-      // Redirect to home page
-      navigate('/'); // This will redirect to the home page after form submission
 
-      // Clear the form fields after submission
+      navigate('/');
       setUserName('');
       setEmail('');
       setPassword('');

@@ -12,6 +12,7 @@ import Wishlist from './pages/Wishlist';
 import Account from './pages/Account';
 import ContactUs from './pages/ContactUs';
 import Checkout from './pages/Checkout';
+import Community from './pages/Community';
 
 import { CartProvider } from './context/CartContext';
 import { WishlistProvider } from './context/WishlistContext';
@@ -31,6 +32,7 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/community" element={<Community />} />
 
         </Routes>
         <Footer />
