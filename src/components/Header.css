@@ -1,0 +1,147 @@
+/* Reset and Base Styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    box-sizing: border-box; /* Ensure padding and border are within the element's width and height */
+  }
+  
+  a:visited {
+    color: #213555;
+  }
+  
+  a:hover {
+    color: #213555;
+  }
+  
+  a:active {
+    color: #213555;
+  }
+  
+  /* Banner 1 Styles */
+  .banner1 {
+    background-color: #213555;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+  }
+  
+  .b {
+    display: inline-block;
+    margin-right: 40px;
+  }
+  
+  .b1 {
+    color: white;
+    font-weight: 800;
+  }
+  
+  .b2 {
+    color: white;
+    font-weight: 200;
+  }
+  
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-around; /* Distribute space around items */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping to keep items in one line */
+    overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+    background-color: white;
+    padding: 10px 20px; /* Add some padding around the header */
+  }
+  
+  .head1 img {
+    width: 100px;
+  }
+  
+  .head2 a,
+  .head4 a,
+  .head5 a,
+  .head6 a {
+    font-size: 0.85rem;
+    color: #213555;
+    text-decoration: none; /* Remove underlines from links */
+    margin: 0 10px; /* Add horizontal margin between links */
+  }
+
+  .head3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .search-input {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .search-icon {
+    color: #213555;
+    cursor: pointer;
+  }
+  
+
+
+  
+  .head8 {
+    padding: 12px 17px;
+    background-color: white;
+    border: solid #213555 1px;
+    color: #213555;
+    margin-left: 10px; /* Add some spacing before the button */
+  }
+  
+  .head9 {
+    padding: 12px 15px;
+    background-color: #213555;
+    border: solid #213555 1px;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .head7 {
+    font-size: 1.5rem;
+    border: none; /* Remove button border */
+    background-color: transparent; /* Make button background transparent */
+    margin-left: 10px;
+    padding: 8px; /* Add some padding around the icon */
+    cursor: pointer; /* Add a pointer cursor for interaction */
+  }
+  
+  .head7 span {
+    color: #213555;
+  }
+  
+  /* Ensure links inside head7 are styled appropriately if needed */
+  .head7 a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from the span */
+    margin: 0;
+    padding: 0;
+  }
+
+  .cart-button {
+    position: relative;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 2px 6px;
+    font-weight: bold;
+  }
+
+
+    

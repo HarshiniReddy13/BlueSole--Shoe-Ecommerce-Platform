@@ -1,0 +1,35 @@
+form{
+    margin:auto;
+    width: 75%px;
+    padding-top: 50px;
+}
+input{
+    width:100%;
+    padding:7px;
+    color: #3E5879;
+    margin:10px 0;
+}
+
+input[type='checkbox'],input[type='radio']{
+    width:10%
+}
+.sq{
+    display:block;
+    width:100%;
+    padding:5px;
+}
+
+input[type='radio']{
+    display:inline;
+    width:20%
+}
+button{
+    background-color: #213555;
+    border-color: #213555;
+    color: white;
+    margin:20px;
+    padding: 10px 15px;
+}
+.x{
+    background-color: white;
+}

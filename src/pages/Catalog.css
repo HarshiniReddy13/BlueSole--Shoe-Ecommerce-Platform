@@ -1,0 +1,85 @@
+/* Catalog.css */
+.catalog {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .catalog h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: stretch; 
+  }
+  
+  
+  .product-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .product-buttons button {
+    background-color: #213555;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .product-buttons button:hover {
+    background-color: #3e4a66;
+  }
+  .i {
+    background-color: #ADD5EF;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+  }
+  
+  .i img {
+    height: 300px;
+    width: auto;
+  }
+  
+  .trending-text {
+    max-width: 500px;
+    color: #213555;
+  }
+  
+  .trending-text h2 {
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .trending-text p {
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+  

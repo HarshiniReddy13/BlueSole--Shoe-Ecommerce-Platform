@@ -1,0 +1,40 @@
+.contact-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fefefe;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  .brand-message {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .email-section {
+    margin: 1.5rem 0;
+  }
+  
+  .email-button {
+    display: inline-block;
+    background-color: #213555;;
+    color: white;
+    font-weight: bold;
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  
+  .signoff {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  

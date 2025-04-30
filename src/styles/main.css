@@ -1,0 +1,64 @@
+/* Basic Reset to ensure consistent styling across browsers */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: sans-serif; /* A sensible default font */
+  line-height: 1.5; /* Improved readability */
+  color: #333; /* A common default text color */
+  background-color: #f4f4f4; /* A light background */
+}
+
+/* Basic typography adjustments */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+a {
+  color: #007bff; /* A common link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 0.5rem rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Prevents extra space below inline images */
+}
+
+/* Basic container for centering content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Add more global styles as needed for your project */

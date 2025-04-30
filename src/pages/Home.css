@@ -1,0 +1,126 @@
+.banner2{
+    position: relative;
+    margin: 2px 0 0 0;
+    height:350px;
+    background-image: url("https://plus.unsplash.com/premium_photo-1727730047398-49766e915c1d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2xlYXIlMjBza3l8ZW58MHx8MHx8fDA%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .ba1 img {
+        height:350px;
+        position: absolute;
+        right:200px;
+    }
+    .ba2{
+        height:130px;
+        position: absolute;
+        background-color: white;
+        left:75px;
+        top:70px;
+        width:400px;
+        box-shadow: 5px 5px 5px #588bb0;
+    }
+    .bh{
+        position: absolute;
+        top:20px;
+        left:20px;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #213555;
+    }
+    .bp{
+        position: absolute;
+        left:20px;
+        top:68px;
+        color: #3E5879;
+    }
+    .banner3{
+        padding:40px 30px;
+        background-color: white;
+    
+    }
+    .ban1{
+        font-weight: 700;
+        font-size: 2.2rem;
+        color:#213555 ;
+    }
+    .ban2{
+        color: #3E5879;
+        font-size:1.2rem;
+        padding-top:7px; 
+    }
+    
+    .line{
+        margin-top:0;
+        position:relative;
+    }
+    .l1{
+        width:132px;
+        border:1.45px solid #213555;
+        position:absolute;
+        top:-25px;
+        left:27px;
+    }
+    .l2{
+        position:absolute;
+        width:1050px;
+        left:162px;
+        border:1px solid #3E5879;
+        top:-24px;
+    }
+    
+    .banner6{
+        padding: 5px;
+    }
+    .banner6 img{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .logos{
+        display: flex;
+        
+        justify-content: space-around;
+        align-items: center;
+        font-size:3rem;
+        color: rgb(97, 101, 104);
+        flex-wrap: wrap;
+        background-color: white;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: "Outfit", serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
+      a:visited {
+        color: #213555;
+      }
+      
+      a:hover {
+        color:#213555;
+      }
+      
+      a:active {
+        color: #213555;
+      } 
+    .banner1{
+        background-color: #213555;
+        position: relative;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .b{
+        display: inline-block;
+        margin-right: 40px;
+    }
+    .b1{
+        color: white;
+        font-weight: 800;
+    }
+    .b2{
+        color: white;
+        font-weight: 200;
+    }
