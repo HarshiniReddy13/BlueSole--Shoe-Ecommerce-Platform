@@ -12,9 +12,9 @@ function Community() {
 
   const [listings, setListings] = useState([]);
 
-  // Load from sessionStorage on component mount
+  // Load from localStorage on component mount
   useEffect(() => {
-    const storedListings = JSON.parse(sessionStorage.getItem('resaleItems')) || [];
+    const storedListings = JSON.parse(localStorage.getItem('resaleItems')) || [];
     setListings(storedListings);
   }, []);
 
@@ -28,7 +28,7 @@ function Community() {
     const updatedListings = [newListing, ...listings];
 
     setListings(updatedListings);
-    sessionStorage.setItem('resaleItems', JSON.stringify(updatedListings));
+    localStorage.setItem('resaleItems', JSON.stringify(updatedListings));
 
     setFormData({
       name: '',
